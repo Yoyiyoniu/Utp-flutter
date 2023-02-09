@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:utp/app/ui/pages/Options/options.dart';
 import 'package:utp/app/ui/pages/Routes/Routes.dart';
 import 'package:utp/app/ui/pages/home/home_controller.dart';
 
@@ -53,7 +54,9 @@ class _HomePageState extends State<HomePage> {
                   child: TextButton(
                     onPressed: () {
                       print('Botón presionado');
-                      Navigator.pushReplacementNamed(context, Routes.OPTIONS);
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const Options(),
+                      ));
                     },
                     child: const Text(
                       'Opciones',

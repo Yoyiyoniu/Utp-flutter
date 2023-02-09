@@ -1,24 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:utp/app/ui/pages/Routes/Routes.dart';
+import 'package:utp/app/ui/pages/home/home_Page.dart';
 
-class Options extends StatefulWidget {
+class Options extends StatelessWidget {
   const Options({super.key});
 
   @override
-  State<Options> createState() => _OptionsState();
-}
-
-class _OptionsState extends State<Options> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: TextButton(
-        onPressed: () {
-          Navigator.pushReplacementNamed(context, Routes.HOME);
-        },
-        child: const Text("PAGINA 2"),
+      appBar: AppBar(
+        title: Text("Mapas"),
       ),
+      body: Container(),
     );
   }
 }
