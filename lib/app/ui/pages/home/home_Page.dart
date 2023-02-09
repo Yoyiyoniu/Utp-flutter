@@ -35,14 +35,27 @@ class _HomePageState extends State<HomePage> {
               height: 150.0,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 236, 246, 255),
+                color: Color.fromARGB(255, 230, 244, 255),
                 borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
+                  topLeft: Radius.circular(50.0),
+                  topRight: Radius.circular(50.0),
                 ),
                 border: Border.all(
                   color: Colors.grey,
                   width: 1.0,
+                ),
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(50.0),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: TextButton(
+                onPressed: null,
+                child: Text(
+                  'OPCIONES',
+                  style: TextStyle(color: Colors.blueAccent),
                 ),
               ),
             ),
