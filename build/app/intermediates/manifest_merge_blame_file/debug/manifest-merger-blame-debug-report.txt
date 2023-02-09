@@ -46,7 +46,7 @@
 32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 32-->[androidx.core:core:1.6.0] C:\Users\rod\.gradle\caches\transforms-3\acbce933e4b464a5224ed377a62db1f5\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 33        android:debuggable="true"
-34        android:icon="@mipmap/ic_launcher"
+34        android:icon="@mipmap/launcher_icon"
 35        android:label="utp" >
 36        <meta-data
 37            android:name="com.google.android.geo.API_KEY"

@@ -20,12 +20,34 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GoogleMap(
-        onMapCreated: _controller.onMapCreated,
-        initialCameraPosition: _initalCameraPosition,
-        myLocationButtonEnabled: false,
-        zoomControlsEnabled: false,
-        minMaxZoomPreference: const MinMaxZoomPreference(15.0, 36.0),
+      body: Stack(
+        children: [
+          GoogleMap(
+            onMapCreated: _controller.onMapCreated,
+            initialCameraPosition: _initalCameraPosition,
+            myLocationButtonEnabled: false,
+            zoomControlsEnabled: false,
+            minMaxZoomPreference: const MinMaxZoomPreference(15.0, 36.0),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 150.0,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 236, 246, 255),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 1.0,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
