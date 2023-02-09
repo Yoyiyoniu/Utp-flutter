@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:utp/app/ui/pages/Routes/Routes.dart';
 import 'package:utp/app/ui/pages/home/home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,30 +33,36 @@ class _HomePageState extends State<HomePage> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 150.0,
+              height: MediaQuery.of(context).size.height * 0.25,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 230, 244, 255),
+                color: const Color.fromARGB(255, 243, 251, 255),
                 borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(50.0),
-                  topRight: Radius.circular(50.0),
+                  topLeft: Radius.circular(40.0),
+                  topRight: Radius.circular(40.0),
                 ),
                 border: Border.all(
                   color: Colors.grey,
-                  width: 1.0,
+                  width: 2.0,
                 ),
               ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(50.0),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: TextButton(
-                onPressed: null,
-                child: Text(
-                  'OPCIONES',
-                  style: TextStyle(color: Colors.blueAccent),
+              child: Padding(
+                padding: const EdgeInsets.all(90.0),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: TextButton(
+                    onPressed: () {
+                      print('Botón presionado');
+                      Navigator.pushReplacementNamed(context, Routes.OPTIONS);
+                    },
+                    child: const Text(
+                      'Opciones',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25.0,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
